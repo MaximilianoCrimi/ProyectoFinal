@@ -1,30 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
-    <div id="contenido">
-        <div class="container">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,400" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+    <title>Gasto Semanal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <div class="container">
+        <header>
+            <h1 class="text-center">Gasto Semanal</h1>
+        </header>
+        <section class="contenido-principal">
             <div class="row">
-                <label for="tareas">Tareas</label>
-                <form id="formulario">
-                    <label for="tareas"></label>
-                    <textarea id="tarea"></textarea>
-                    <input type="submit" class="button" value="Agregar">
-                </form>
-            </div>
-            <div>
-                <h2>MIS TAREAS</h2>
-                <div id="lista-tareas"></div>
-            </div>
-        </div>
+                <div class="col ">
+                    <div class="contenido primario">
+                        <h2 class="text-center">Añade tus gastos aqui</h2>
+                            <form id="agregar-gasto" action="#">
+                                <div class="form-group">
+                                    <label for="gasto">Gasto:</label>
+                                    <input type="text" class="form-control" id="gasto" placeholder="Nombre Gasto">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cantidad">Cantidad:</label>
+                                    <input type="text" class="form-control" id="cantidad" placeholder="Cantidad en $">
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Agregar</button>
+                            </form>
+
+                    </div> <!--.contenido-->
+                </div> <!--.col-->
+
+                <div class="col">
+                    <div class="contenido secundario">
+
+                        <h2 class="text-center">Listado</h2>
+
+                        <div id="gastos">
+                            <ul class="list-group"></ul>
+                        </div>
+                        <div id="presupuesto" class="presupuesto">
+                            <div class="alert alert-primary">
+                                <p>Presupuesto: $ <span id="total"></span> </p>
+                            </div>
+                            <div class="restante alert alert-success">
+                                <p>Restante: $ <span id="restante"></span></p>
+                            </div>
+                        </div> <!--.presupuesto-->
+                    </div> <!--.contenido-->
+                </div><!--.col-->
+            </div> <!--.row-->
+        </section>
     </div>
-    
-    <script src="./code.js"></script>
-</body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+    <script src="code.js"></script>
+  </body>
 </html>
